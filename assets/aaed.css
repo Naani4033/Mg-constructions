@@ -1,0 +1,55 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Slider container */
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Slider styling */
+  .slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Each slide styling */
+  .slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add animation for sliding */
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    33% {
+      transform: translateX(-100%);
+    }
+    66% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .slider {
+    animation: slideAnimation 9s infinite;
+  }
